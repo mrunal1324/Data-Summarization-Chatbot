@@ -1,13 +1,17 @@
 from transformers import pipeline
 import whisper
 import json
+import torch
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {device}")
 
 # Load the models
-summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
-psych_summarizer = pipeline("summarization", model="google/flan-t5-large")
+pipeline("summarization", model="facebook/bart-large-cnn", device=device)
+psych_summarizer = pipeline("summarization", model="google/flan-t5-large", device=device)
+
 
 # Initialize Whisper model for transcription
-whisper_model = whisper.load_model("medium")
+whisper_model = whisper.load_model("large", device=device)
 
 # Helper function to summarize text
 def summarize_text(text, max_length=130, min_length=30):
