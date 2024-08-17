@@ -1,0 +1,15 @@
+{
+    "locations": [
+        {"name": "Aga Khan Palace", "type": "historical", "coordinates": [18.5324, 73.8934]},
+        {"name": "Shaniwarwada", "type": "historical", "coordinates": [18.5196, 73.8554]},
+        {"name": "Osho International Meditation Resort", "type": "meditation", "coordinates": [18.5308, 73.8944]},
+        {"name": "Pune University", "type": "educational", "coordinates": [18.5204, 73.8476]},
+        {"name": "Pashan Lake", "type": "nature", "coordinates": [18.5562, 73.8228]}
+    ],
+    "routes": [
+        {"start": "Aga Khan Palace", "end": "Shaniwarwada", "distance_km": 6.5},
+        {"start": "Shaniwarwada", "end": "Osho International Meditation Resort", "distance_km": 7.0},
+        {"start": "Osho International Meditation Resort", "end": "Pune University", "distance_km": 3.5},
+        {"start": "Pune University", "end": "Pashan Lake", "distance_km": 8.0}
+    ]
+}
